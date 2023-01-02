@@ -1,0 +1,28 @@
+<h2>Inventory Items</h2>
+
+<div>
+  <label for="new-product">Inventory Item: </label>
+  <input id="new-product" #productName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(productName.value); productName.value=''">
+    Add Inventory item
+  </button>
+</div>
+
+<ul class="products">
+  <li *ngFor="let product of products">
+    <a routerLink="/detail/{{product.id}}">
+      <span class="badge">{{product.id}}</span> {{product.name}}      
+    </a>
+    <button type="button" class="delete" title="delete product"
+      (click)="delete(product)">x</button>
+  </li>
+</ul>
+
+<nav>
+  <div style = "position:relative; left:1800px; top:8px;">
+    <button class="out" (click)="logout()">Logout</button>  
+  </div>
+</nav>
+

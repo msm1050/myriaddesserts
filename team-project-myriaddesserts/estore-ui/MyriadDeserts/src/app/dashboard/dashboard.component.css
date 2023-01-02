@@ -1,0 +1,83 @@
+/* DashboardComponent's private CSS styles */
+
+h2 {
+  text-align: center;
+}
+
+.items {
+  padding: 0;
+  margin: auto;
+  max-width: 1000px;
+
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.items li {
+  display: flex;
+  margin: .5rem auto;
+}
+
+.items button {
+  background-color: #3f525c;
+  border-radius: 2px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+  
+  margin: .5rem auto;
+  box-sizing: border-box;
+
+  /* flexbox */
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.items button:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+
+.items button:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.items button.selected {
+  background-color: black;
+  color: white;
+}
+
+.items button.selected:hover {
+  background-color: #505050;
+  color: white;
+}
+
+.items button.selected:active {
+  background-color: black;
+  color: white;
+}
+
+.items .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #405061;
+  line-height: 1em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.items .name {
+  align-self: center;
+}
+

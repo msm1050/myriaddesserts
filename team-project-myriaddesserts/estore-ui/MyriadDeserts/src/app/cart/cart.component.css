@@ -1,0 +1,63 @@
+label {
+  color: #435960;
+  font-weight: bold;
+}
+
+.btn{
+background-color: #af964c; /* Brown */
+border: none;
+color: rgb(246, 243, 241);
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+
+
+.clear{
+background-color: #ec7846; /* Red */
+border: none;
+color: rgb(236, 230, 230);
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+
+}
+
+.checkout{
+background-color: #040201; /* Black */
+border: none;
+color: rgb(236, 230, 230);
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+
+}
+
+.pcheckout{
+background-color: #1b0e07; /* Dark Brown */
+border: none;
+color: rgb(236, 230, 230);
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

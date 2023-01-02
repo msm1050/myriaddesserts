@@ -1,0 +1,32 @@
+<app-top-bar></app-top-bar>
+
+<h2>Products</h2>
+<ul class="items">
+  <li *ngFor="let item of items">
+    <button [class.selected]="item === selectedItem" type="button" (click)="onSelect(item)">      
+      <span class="name">{{item.name}}</span>            
+    </button>    
+  </li>
+</ul>
+
+
+<div *ngIf="selectedItem">
+  <h2>{{selectedItem.name}} Details</h2>
+  <div>Name: {{selectedItem.name}}</div>
+  <div>Id: {{selectedItem.id}}</div>
+  <div>Price ($): {{selectedItem.price}}</div>   
+  <div>Ingredients: {{selectedItem.ingredients}}</div>
+  <button [class.selected]="products" type="button" (click)="getList(selectedItem); clear(selectedItem)">Customize</button>
+  <script src="script.js"></script>
+  <ul class="products">   
+    <li *ngFor="let product of products"> Available Product: 
+      <span class="products">{{product.name}}</span> 
+      <button  id="Select" (click)="select(selectedItem, product)">select</button> 
+      <button  id="Deselect" type="button" (click)="deselect(selectedItem, product)">deselect</button> 
+    </li>
+  </ul>  
+  <button type="button" (click)="addToCart(selectedItem)">Add to Cart</button> 
+   
+</div>
+
+

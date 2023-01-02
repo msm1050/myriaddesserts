@@ -1,0 +1,16 @@
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let item of items; let i=index">  
+  <label for="item-name">Product Name: {{item.name}} </label><br>
+  <label for="item-quantity">Product quantity: </label>
+    <input quantity="product-quantity" [(ngModel)]="item.quantity" placeholder="Item quantity"/><br>
+  <label for="item-name">Product Ingredients: {{item.ingredients}} </label><br>
+  <label for="item-name">Product Unit Price: {{item.price}} </label>
+  <button class="btn" (click)="removeItem(i)"> delete </button><br><br>
+</div>
+
+
+<button class="back" (click)="goBack(); save()"> Go Back</button>
+<button class="clear" (click)="clearCart(); goBack(); save()"> Clear Cart</button><br><br>
+<button class="pcheckout" (click)="preview_checkout(items)"> Preview Checkout</button><br><br>
+<button class="checkout" (click)="checkout(items)"> Confirm Checkout</button>
